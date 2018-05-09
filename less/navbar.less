@@ -1,0 +1,130 @@
+
+//m-navbar
+.m-navbar{
+
+    &.navbar{
+        .border-radius(0);
+        margin-bottom: 0;
+        border-bottom: 1px solid #fff;
+    }
+
+    &.navbar-default {
+        background-color:@navbarGg;
+        border-color: transparent;
+    }
+
+    .navbar-header{
+        .navbar-brand{
+            float: none;
+            width: 100%;
+            .tc();
+            .db();
+            padding: 0;
+            margin: 0;
+            line-height: 50px;
+
+            img{
+                .dib();
+                width: 50%;
+            }
+
+        }
+
+        margin-right: -16px;
+        margin-left: -16px;
+    }
+
+    .navbar-collapse{
+        margin-right: -16px;
+        margin-left: -16px; 
+        padding: 0;
+    }
+
+}
+
+.m-nav{
+    &.nav{
+        width: 100%;
+        margin:10px 0;
+
+        >li{
+            width: 33.33%;
+            .fl();
+            .tc();
+
+            &:last-child,&:nth-child(7){
+                .dn();
+            }
+
+            a{
+                color:#fff;
+                .font-s18();
+                padding: 6px 0;
+
+                &:hover,&:active,&:focus{
+                    color:@navActive;
+                }
+            }
+
+            &.active{
+                >a{
+                    color:@navActive;
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .m-navbar{
+        &.navbar{
+            border-bottom: none;
+            >.container,>.container-fluid{
+                .navbar-brand{
+                    margin-left: 0px;
+                    padding: 29px 0;
+                    height: auto;
+                    img{
+                        .dib();
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .m-nav{
+        &.nav{
+
+            >li{
+                width:auto;
+                .fl();
+                .tc();
+                border-right: 1px solid #fff;
+
+                &:last-child{
+                    border-right: none;
+                    .db();
+                }
+                a{
+                    padding: 10px 26px
+                }
+
+                &.active{
+                    >a{
+
+                    }
+                }
+            }
+        }
+
+        &.navbar-nav {
+            float: left;
+            margin: 16px -15px;
+        }
+    }
+
+
+}
